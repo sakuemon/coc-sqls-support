@@ -1,0 +1,37 @@
+{
+  "name": "coc-sqls-support",
+  "version": "0.0.1",
+  "description": "sql language server support for coc.nvim",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint --fix src/**/*.ts",
+    "watch": "webpack --watch",
+    "build": "webpack",
+    "prepare": "webpack",
+    "docker.build": "docker build -t test-mysql tests/.",
+    "docker.run": "docker container run -d -p 3306:3306 --name test-db test-mysql"
+  },
+  "keywords": [
+    "coc.nvim",
+    "sql"
+  ],
+  "author": "sakuemon@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@chemzqm/tsconfig": "0.0.3",
+    "@types/node": "^14.6.0",
+    "@typescript-eslint/eslint-plugin": "^3.9.1",
+    "@typescript-eslint/parser": "^3.9.1",
+    "coc.nvim": "^0.0.77",
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "ts-loader": "^8.0.2",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {}
+}
